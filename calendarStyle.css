@@ -900,7 +900,7 @@ body .ui-tooltip {
 	border: 1px solid ;
 } */
 .ui-widget-content {
-	border: 1px solid #dddddd;
+	border: 1px solid var(--brand);
 	background: #eeeeee url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
 	color: #333333;
 }
@@ -908,7 +908,7 @@ body .ui-tooltip {
 	color: #333333;
 }
 .ui-widget-header {
-	border: 1px solid white;
+	border: 1px solid var(--brand);
 	background: #f6a828 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
 	color: #ffffff;
 	font-weight: bold;
@@ -928,7 +928,7 @@ body .ui-tooltip {
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-	border: 1px solid #cccccc;
+	border: 1px solid var(--brand);
 	background: var(--brand) url("images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: white;
@@ -979,10 +979,10 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid black;
+	border: 1px solid red;
 	background: #ffffff;
 	font-weight: bold;
-	color: black;
+	color: red;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
@@ -1002,7 +1002,7 @@ a.ui-button:active,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
 	border: none;
-	background: #007177;
+	background: #08585c; /* SELECTED IS HERE */
 	color: white;
 }
 .ui-state-checked {
@@ -1312,9 +1312,9 @@ a.ui-button:active,
 	background-color: white;
 }
 
-.ui-datepicker-week-end {
-	background-color: var(--brand);
-}
+/* .ui-datepicker-week-end {
+	background-color: red;
+} */
 
 /* .ui-datepicker-other-month {
 	background-color: green;
