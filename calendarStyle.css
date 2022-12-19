@@ -1328,3 +1328,19 @@ a.ui-button:active,
 .ui-datepicker-current-day {
 	background-color: none;
 }
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 45%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.ui-datepicker select.ui-datepicker-month {
+  border-radius: 6px 0 0 6px;
+}
+
+.ui-datepicker select.ui-datepicker-year {
+  border-radius: 0 6px 6px 0;
+}
