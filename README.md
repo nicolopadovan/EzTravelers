@@ -94,6 +94,7 @@ Retargeting ads can be shown to you both before and after you leave eztrippers.i
 These “like” and “share” buttons work using pieces of code from the individual social media providers, allowing third-party cookies to be placed on your device.
 These cookies can be purely functional, but can also be used to keep track of which websites you visit from their network, to build a profile of your online browsing behavior, and to show you personalized ads. This profile will be partly built using comparable info the providers receive from your visits to other websites in their network.
 To read more about what social media providers do with your personal data, take a look at their cookie and/or privacy statements: Facebook (includes Instagram, Messenger, and Audience Network), Snapchat, Pinterest, and Twitter. Be aware that these statements may be updated from time to time.
+
 We work with trusted third parties to collect data. We may occasionally share info with these third parties, such as your email address or phone number. These third parties might link your data to other info they collect to create custom audiences or deliver targeted ads. For info about how these third parties process your data, take a look at the following links: How Google uses information, Facebook's data policy.
 Non-cookie techniques – email pixels
 We may also use techniques like pixels, which we don’t mark as cookies because they don’t store any info on your device.
