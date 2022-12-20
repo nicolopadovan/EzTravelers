@@ -117,6 +117,7 @@ Members of the NAI and IAB adhere to industry standards and codes of conduct, an
 Visit www.networkadvertising.org to identify NAI members that may have placed advertising cookies on your computer. To opt out of any NAI member's behavioral advertising program, just check the box that corresponds to that company.
 You may also want to visit www.youronlinechoices.com or www.youradchoices.com to learn how to opt out of customized ads.
 Your mobile device may allow you to limit the sharing of info for retargeting purposes through its settings. If you choose to do so, remember that opting out of an online advertising network doesn't mean you’ll no longer see or be subject to online advertising or marketing analysis. It just means the network you opted out of won't deliver ads customized to your web preferences and browsing patterns anymore.
+
 Some websites have “Do Not Track” features that allow you to tell a website not to track you. We’re currently unable to support “Do Not Track” browser settings.
 How to contact us
 If you have any questions about this cookie statement, write us at eztrippers@gmail.com
