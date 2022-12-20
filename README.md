@@ -61,6 +61,7 @@ IP address
 - Whether you have responded to an advertisement
 - A referral URL
 - Features used or activities engaged in on the website/apps.
+
 They allow you to be recognized as the same user across the pages of a website, devices, between websites, or when you use our apps. When it comes to purpose, they’re divided into three categories: Functional cookies, analytical cookies, and marketing cookies.
 Functional cookies
 These are cookies required for our websites and apps to function and must be enabled for you to use our services.
@@ -80,6 +81,7 @@ More specifically, these cookies:
 - Help us understand the effectiveness of advertisements and communications.
 - Teach us how users interact with our website or apps after they’re shown an online ad, including ads on third-party websites.
 - Enable our business partners to learn whether or not their customers make use of any accommodation offers integrated into their websites.
+
 The data we gather through these cookies can include which web pages you’ve viewed, which referral/exit pages you’ve entered and left from, which platform type you’ve used, which emails you’ve opened and acted upon, and date and timestamp info. It also means we can use details about how you’ve interacted with the site or app, such as the number of clicks you make on a given screen, your mouse and scrolling activity, the search words you use, and the text you enter into various fields.
 Marketing cookies
 These cookies are used by Eztrippers.it and our trusted partners to gather info about you over time, across multiple websites, applications, or other platforms.
@@ -98,17 +100,23 @@ We may also use techniques like pixels, which we don’t mark as cookies because
 We sometimes place pixels in emails like newsletters. A “pixel” is an electronic file the size of a single pixel that’s placed in the email and loaded when you open it. By using email pixels, we can see if the message was delivered, if and when you read it, and what you click.
 We also receive this info about the push notifications we send you. These statistics provide us with feedback about your reading behavior, which we use to optimize our messages, and make our communications more relevant to you.
 
-What are your choices?
+## What are your choices?
 To learn more about cookies and how to manage or delete them, visit allaboutcookies.org or the help section of your browser.
 Under the settings for browsers like Internet Explorer, Safari, Firefox, or Chrome, you can choose which cookies to accept and reject. Where you find these settings depends on the browser you use:
-Cookie settings in Chrome 
-Cookie settings in Firefox 
-Cookie settings in Internet Explorer 
-Cookie settings in Safari 
+- Cookie settings in Chrome
+- Cookie settings in Firefox
+- Cookie settings in Internet Explorer
+- Cookie settings in Safari
 If you choose to block certain functional cookies, you may not be able to use some features of our services.
 In addition to specific settings that we may offer on the eztrippers.it and apps, you can also opt out of certain cookies:
-Analytics To prevent Google Analytics from collecting analytical data on certain browser types visit the following link: Google Analytics Opt-out Browser Add-on (only available on desktop). 
-Advertising We always aim to work with advertising and marketing companies that are members of the Network Advertising Initiative (NAI) and/or the Interactive Advertising Bureau (IAB). Members of the NAI and IAB adhere to industry standards and codes of conduct, and allow you to opt out of behavioral advertising. Visit www.networkadvertising.org to identify NAI members that may have placed advertising cookies on your computer. To opt out of any NAI member's behavioral advertising program, just check the box that corresponds to that company. You may also want to visit www.youronlinechoices.com or www.youradchoices.com to learn how to opt out of customized ads. Your mobile device may allow you to limit the sharing of info for retargeting purposes through its settings. If you choose to do so, remember that opting out of an online advertising network doesn't mean you’ll no longer see or be subject to online advertising or marketing analysis. It just means the network you opted out of won't deliver ads customized to your web preferences and browsing patterns anymore. 
+### Analytics
+To prevent Google Analytics from collecting analytical data on certain browser types visit the following link: Google Analytics Opt-out Browser Add-on (only available on desktop).
+### Advertising
+We always aim to work with advertising and marketing companies that are members of the Network Advertising Initiative (NAI) and/or the Interactive Advertising Bureau (IAB).
+Members of the NAI and IAB adhere to industry standards and codes of conduct, and allow you to opt out of behavioral advertising.
+Visit www.networkadvertising.org to identify NAI members that may have placed advertising cookies on your computer. To opt out of any NAI member's behavioral advertising program, just check the box that corresponds to that company.
+You may also want to visit www.youronlinechoices.com or www.youradchoices.com to learn how to opt out of customized ads.
+Your mobile device may allow you to limit the sharing of info for retargeting purposes through its settings. If you choose to do so, remember that opting out of an online advertising network doesn't mean you’ll no longer see or be subject to online advertising or marketing analysis. It just means the network you opted out of won't deliver ads customized to your web preferences and browsing patterns anymore.
 Some websites have “Do Not Track” features that allow you to tell a website not to track you. We’re currently unable to support “Do Not Track” browser settings.
 How to contact us
 If you have any questions about this cookie statement, write us at eztrippers@gmail.com
