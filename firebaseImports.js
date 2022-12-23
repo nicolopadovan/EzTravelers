@@ -11,8 +11,9 @@ const firebaseConfig = {
 	appId: "1:1089945914767:web:b6b759161fc88fe2474ffa"
 };
 
-console.log("2. Initializing Firebase");
 const app = initializeApp(firebaseConfig);
 const functions = getFunctions(app, "europe-west2")
 console.log("3. All initialized");
 const getDestinationsFromAPI = httpsCallable('getDestinationsFromAPI');
+
+export { functions }
