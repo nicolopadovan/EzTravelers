@@ -16,4 +16,4 @@ const functions = getFunctions(app, "europe-west2")
 console.log("3. All initialized");
 const getDestinationsFromAPI = httpsCallable('getDestinationsFromAPI');
 
-export { functions }
+export { getDestinationsFromAPI }
