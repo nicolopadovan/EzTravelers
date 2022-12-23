@@ -1,4 +1,4 @@
-import { functions } from "./firebaseImports";
+import { functions } from "./firebaseImports.js";
 
 // Initialize Cloud Functions through Firebase  
 console.log("4. Loading Main");
