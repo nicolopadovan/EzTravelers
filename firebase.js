@@ -1,8 +1,4 @@
-import { functions } from "./firebaseImports.js";
-
-// Initialize Cloud Functions through Firebase  
-console.log("4. Loading Main");
-console.log(functions);
+import { getDestinationsFromAPI } from "./firebaseImports.js";
 
 var searchBtn = document.getElementById("conversionBtn");
 var searchInput = document.getElementById("searchField");
