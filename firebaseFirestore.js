@@ -13,9 +13,7 @@ async function addDocumentWithAutoID(collectionName, obj) {
 }
 
 async function addDocument(collectionName, documentName, obj) {
-	return setDoc(doc(database, collectionName, documentName), obj).then((docRef) => {
-		return docRef.id;
-	});
+	return setDoc(doc(database, collectionName, documentName), obj);
 }
 
 export { addDocumentWithAutoID, addDocument };

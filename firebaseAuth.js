@@ -22,10 +22,12 @@ async function createUserWithEmailAndPassword(email, password) {
 		.then((userCredential) => {
 			// Signed in 
 			const user = userCredential.user;
+			consolel.log(`User ${user.uid}`);
 			return user;
 		}).catch((error) => {
 			const errorCode = error.code;
 			const errorMessage = error.message;
+			console.log(`Error ${error}`)
 			return error;
 		});
 }
@@ -134,4 +136,15 @@ function signInWithGoogle() {
 
 let currentUser = auth.currentUser;
 
-export { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, updatePassword, sendPasswordResetEmail, deleteUser, signOut, signInWithGoogle, currentUser }
+export {
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword,
+	onAuthStateChanged,
+	sendEmailVerification,
+	updatePassword,
+	sendPasswordResetEmail,
+	deleteUser,
+	signOut,
+	signInWithGoogle,
+	currentUser
+}

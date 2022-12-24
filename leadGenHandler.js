@@ -9,6 +9,7 @@ const marketingCheckBox = document.getElementById("marketingCheckBox");
 const unlockBlurwallBtn = document.getElementById("unlockBlurwallBtn");
 
 function unlockBlurWall() {
+	window.localStorage.setItem('storageGrantConsent', 'true');
 	const blurWalls = document.getElementsByClassName("blurwall");
 	for (let element of blurWalls) {
 		element.style.filter = "none";
@@ -23,7 +24,7 @@ function unlockBlurWall() {
 	leadGenContainer.style.display = "none";
 }
 
-if (getCookie("email")) {
+if (getCookie("personalization_email")) {
 	unlockBlurWall();
 }
 
@@ -53,7 +54,7 @@ unlockBlurwallBtn.addEventListener("click", function () {
 
 		unlockBlurWall();
 		// TODO: Code to save the consent of preferences storage cookies
-		setCookie('email', email, { secure: true, 'max-age': 2628e6 });
+		setCookie('personalization_email', email, { secure: true, 'max-age': 2628e6 });
 
 		addDocument("leadGenerationUsers", `${email}`, {
 			name: name,
