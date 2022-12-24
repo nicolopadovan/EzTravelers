@@ -7,7 +7,7 @@ const firebaseConfig = {
 	projectId: "eztrippers-lq-mvp",
 	storageBucket: "eztrippers-lq-mvp.appspot.com",
 	messagingSenderId: "1089945914767",
-	appId: "1:1089945914767:web:b6b759161fc88fe2474ffa"
+	appId: "1:1089945914767:web:db3f693327d2048b474ffa"
 };
 
 const app = initializeApp(firebaseConfig);
