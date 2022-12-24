@@ -53,7 +53,6 @@ unlockBlurwallBtn.addEventListener("click", function () {
 
 		unlockBlurWall();
 		// TODO: Code to save the consent of preferences storage cookies
-		date = date.toUTCString();
 		setCookie('email', email, { secure: true, 'max-age': 2628e6 });
 
 		return addDocument("leadGenerationUsers", {
