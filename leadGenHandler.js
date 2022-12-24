@@ -1,4 +1,7 @@
-// Remember to use GTM-compatible JS
+if (!getCookie("email")) {
+	return;
+}
+
 import { addDocument } from "./firebaseFirestore.js";
 
 const leadGenNameTextField = document.getElementById("leadGenNameTextField");
@@ -45,6 +48,11 @@ leadGenBtn.addEventListener("click", function () {
 	}
 
 	unlockBlurwallBtn.style.display = "none";
+	leadGenContainer.style.display = "none";
+
+	// TODO: Code to save the consent of preferences storage cookies
+	date = date.toUTCString();
+	setCookie('email', email, { secure: true, 'max-age': 2628e6 });
 
 	return addDocument("leadGenerationUsers", {
 		name: name,

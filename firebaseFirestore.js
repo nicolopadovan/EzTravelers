@@ -1,14 +1,21 @@
 import { app } from "./firebaseInit.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getFirestore, collection, doc, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 const database = getFirestore(app);
 
-async function addDocument(collectionName, obj) {
-	return addDoc(collection(database, collectionName), obj).then((docID) => {
-		console.log(`DocumentID: ${docID}`);
+async function addDocumentWithAutoID(collectionName, obj) {
+	return addDoc(collection(database, collectionName), obj).then((docRef) => {
+		console.log(`DocumentID: ${docRef.id}`);
+		return docRef.id
 	}).catch((err) => {
 		console.log(`Error: ${err}`);
 	});
 }
 
-export { addDocument };
+async function addDocument(collectionName, documentName, obj) {
+	return addDoc(doc(database, collectionName, documentName), obj).then((docRef) => {
+		return docRef.id;
+	});
+}
+
+export { addDocumentWithAutoID, addDocument };
