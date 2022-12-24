@@ -23,6 +23,7 @@ function unlockBlurWall() {
 	leadGenContainer.style.display = "none";
 }
 
+deleteCookie("email");
 if (getCookie("email")) {
 	unlockBlurWall();
 }
