@@ -1,5 +1,5 @@
 import { app } from "./firebaseInit.js";
-import { getFirestore, collection, doc, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getFirestore, collection, doc, addDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 const database = getFirestore(app);
 
@@ -13,7 +13,7 @@ async function addDocumentWithAutoID(collectionName, obj) {
 }
 
 async function addDocument(collectionName, documentName, obj) {
-	return addDoc(doc(database, collectionName, documentName), obj).then((docRef) => {
+	return setDoc(doc(database, collectionName, documentName), obj).then((docRef) => {
 		return docRef.id;
 	});
 }
