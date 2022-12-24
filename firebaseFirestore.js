@@ -11,12 +11,4 @@ async function addDocument(collectionName, obj) {
 	});
 }
 
-async function addDocument(collectionName, documentID, obj) {
-	return addDoc(collection(database, collectionName, documentID), obj).then((document) => {
-		// 
-	}).catch((err) => {
-		//
-	});
-}
-
 export { addDocument };
