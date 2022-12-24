@@ -23,7 +23,6 @@ function unlockBlurWall() {
 	leadGenContainer.style.display = "none";
 }
 
-deleteCookie("email");
 if (getCookie("email")) {
 	unlockBlurWall();
 }
@@ -56,7 +55,7 @@ unlockBlurwallBtn.addEventListener("click", function () {
 		// TODO: Code to save the consent of preferences storage cookies
 		setCookie('email', email, { secure: true, 'max-age': 2628e6 });
 
-		return addDocument("leadGenerationUsers", {
+		addDocument("leadGenerationUsers", `${email}`, {
 			name: name,
 			email: email,
 			marketingConsent: marketingConsent
