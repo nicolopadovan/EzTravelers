@@ -1,5 +1,5 @@
 import {
-	createUserWithEmailAndPassword,
+	createUserWithEmail,
 } from "./firebaseAuth.js"
 import { addDocument } from "./firebaseFirestore.js"
 
@@ -23,7 +23,7 @@ signUpBtn.addEventListener("click", function () {
 		return;
 	}
 
-	createUserWithEmailAndPassword(email, password).then((user) => {
+	createUserWithEmail(email, password).then((user) => {
 		addDocument("users", user.uid, {
 			email: email,
 		})
