@@ -22,7 +22,7 @@ async function createUserWithEmail(email, password) {
 		.then((userCredential) => {
 			// Signed in 
 			const user = userCredential.user;
-			consolel.log(`User ${user.uid}`);
+			console.log(`User ${user.uid}`);
 			return user;
 		}).catch((error) => {
 			const errorCode = error.code;
