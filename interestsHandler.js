@@ -27,5 +27,7 @@ saveBtn.addEventListener("click", function () {
 	};
 
 	console.log(currentUser);
-	addDocument(`users/${currentUser.uid}/interests`, "interests", interests);
+	addDocument(`users/${currentUser.uid}/interests`, "interests", interests).then(() => {
+		window.location.href = "/";
+	});
 })
