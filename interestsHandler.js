@@ -6,7 +6,7 @@ const saveBtn = document.getElementById("saveBtn");
 saveBtn.addEventListener("click", function () {
 
 	const safetyPref = document.getElementById("safetySlider").value;
-	const socialPref = document.getElementById("socialSlider").elements["sliderValue"].value;
+	const socialPref = document.getElementById("socialSlider").value;
 
 	const destinationPref = document.querySelector('input[name="question1"]:checked').value;
 	const objectivePref = document.querySelector('input[name="question2"]:checked').value;
