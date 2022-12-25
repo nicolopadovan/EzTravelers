@@ -17,6 +17,6 @@ const appCheck = initializeAppCheck(app, {
 	isTokenAutoRefreshEnabled: true
 })
 
-console.log("Version 1");
+console.log("Version 2");
 
 export { app, getToken };
