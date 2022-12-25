@@ -1,9 +1,28 @@
 import { currentUser } from "./firebaseAuth.js";
-import { addDocument } from "./firebaseFirestore.js";
+import { addDocument, addDocumentWithAutoID } from "./firebaseFirestore.js";
 
-const interests = {
-	interests: [],
-	tripGroupSize: 1
-}
+const saveBtn = document.getElementById("saveBtn");
 
-addDocument("users", currentUser.uid, interests);
+saveBtn.addEventListener("click", function () {
+
+	const safetyPref = document.getElementById("safetySlider").value;
+	const socialPref = document.getElementById("socialSlider").elements["sliderValue"].value;
+
+	const destinationPref = document.querySelector('input[name="question1"]:checked').value;
+	const objectivePref = document.querySelector('input[name="question2"]:checked').value;
+	const modePref = document.querySelector('input[name="question3"]:checked').value;
+
+	if (!(safetyPref && socialPref && destinationPref && objectivePref && modePref)) {
+		return;
+	}
+
+	const interests = {
+		safety: safetyPref,
+		social: socialPref,
+		destination: destinationPref,
+		objective: objectivePref,
+		mode: modePref
+	};
+
+	addDocument(`users/${currentUser.uid}/interests`, "interests", interests);
+})

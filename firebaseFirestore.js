@@ -3,8 +3,8 @@ import { getFirestore, collection, doc, addDoc, setDoc } from "https://www.gstat
 
 const database = getFirestore(app);
 
-async function addDocumentWithAutoID(collectionName, obj) {
-	return addDoc(collection(database, collectionName), obj).then((docRef) => {
+async function addDocumentWithAutoID(collectionPath, obj) {
+	return addDoc(collection(database, collectionPath), obj).then((docRef) => {
 		console.log(`DocumentID: ${docRef.id}`);
 		return docRef.id
 	}).catch((err) => {
@@ -12,8 +12,8 @@ async function addDocumentWithAutoID(collectionName, obj) {
 	});
 }
 
-async function addDocument(collectionName, documentName, obj) {
-	return setDoc(doc(database, collectionName, documentName), obj);
+async function addDocument(collectionPath, documentName, obj) {
+	return setDoc(doc(database, collectionPath, documentName), obj);
 }
 
 export { addDocumentWithAutoID, addDocument };
