@@ -12,6 +12,7 @@ saveBtn.addEventListener("click", function () {
 	const objectivePref = document.querySelector('input[name="question2"]:checked').value;
 	const modePref = document.querySelector('input[name="question3"]:checked').value;
 
+	console.log(`Checking ${safetyPref, socialPref, destinationPref, objectivePref, modePref}`);
 	if (!(safetyPref && socialPref && destinationPref && objectivePref && modePref)) {
 		return;
 	}
