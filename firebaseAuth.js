@@ -69,6 +69,5 @@ authStateListener();
 
 export {
 	createUserWithEmail,
-	signInWithEmail,
-	currentUser
+	signInWithEmail
 }
