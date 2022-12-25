@@ -3,7 +3,7 @@ import { initializeAppCheck, ReCaptchaV3Provider, getToken } from "https://www.g
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAoHPscXLUb52j-PbsakU_TuafJcGNA-3o",
-	authDomain: "eztrippers-lq-mvp.firebaseapp.com",
+	authDomain: "eztrippers.it",
 	projectId: "eztrippers-lq-mvp",
 	storageBucket: "eztrippers-lq-mvp.appspot.com",
 	messagingSenderId: "1089945914767",
