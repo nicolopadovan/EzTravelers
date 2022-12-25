@@ -37,6 +37,7 @@ async function signInWithEmail(email, password) {
 		.then((userCredential) => {
 			// Signed in 
 			const user = userCredential.user;
+			console.log(`Signed user: ${user.uid}`);
 			return user;
 		})
 		.catch((error) => {
@@ -47,7 +48,7 @@ async function signInWithEmail(email, password) {
 }
 
 let currentUser = auth.currentUser;
-console.log(`CurrentUser: ${currentUser}`);
+console.log(`CurrentUser: ${currentUser.uid}`);
 
 export {
 	createUserWithEmail,
