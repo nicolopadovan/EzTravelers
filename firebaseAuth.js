@@ -57,6 +57,7 @@ async function authStateListener() {
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
 				console.log(`User is logged in with UID ${user.uid}`);
+				currentUser = user;
 				resolve(user)
 			} else {
 				reject("User is signed out");
@@ -65,9 +66,12 @@ async function authStateListener() {
 	})
 }
 
+let currentUser = auth.currentUser;
+
 authStateListener();
 
 export {
 	createUserWithEmail,
-	signInWithEmail
+	signInWithEmail,
+	currentUser
 }
