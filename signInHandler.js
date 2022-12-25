@@ -20,6 +20,10 @@ signInBtn.addEventListener("click", function () {
 	}
 
 	signInWithEmail(email, password).then((user) => {
-		console.log(`Signed In User UID: ${user.uid}`);
+		if (!user) {
+			return;
+		}
+
+		window.location.href = "/";
 	});
 });

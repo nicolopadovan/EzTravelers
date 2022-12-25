@@ -23,9 +23,15 @@ signUpBtn.addEventListener("click", function () {
 	}
 
 	createUserWithEmail(email, password).then((user) => {
+		if (!user) {
+			return;
+		}
+
 		addDocument("users", user.uid, {
-			email: email,
-		})
+			email: email
+		});
+
+		window.location.href = "/";
 	});
 
 });
