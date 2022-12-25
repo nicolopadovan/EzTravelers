@@ -19,4 +19,6 @@ const appCheck = initializeAppCheck(app, {
 
 console.log("Version 2");
 
+
+
 export { app, getToken };

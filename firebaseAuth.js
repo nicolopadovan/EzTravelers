@@ -52,7 +52,20 @@ async function signInWithEmail(email, password) {
 	});
 }
 
-let currentUser = auth.currentUser;
+async function authStateListener() {
+	return new Promise((resolve, reject) => {
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				console.log(`User is logged in with UID ${user.uid}`);
+				resolve(user)
+			} else {
+				reject("User is signed out");
+			}
+		});
+	})
+}
+
+authStateListener();
 
 export {
 	createUserWithEmail,
