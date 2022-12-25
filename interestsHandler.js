@@ -26,6 +26,6 @@ saveBtn.addEventListener("click", function () {
 		mode: modePref
 	};
 
-	console.log(currentUser.uid);
+	console.log(currentUser);
 	addDocument(`users/${currentUser.uid}/interests`, "interests", interests);
 })
