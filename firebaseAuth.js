@@ -37,7 +37,7 @@ async function signInWithEmail(email, password) {
 		.then((userCredential) => {
 			// Signed in 
 			const user = userCredential.user;
-			console.log(`Signed user: ${user.uid}`);
+			console.log(`Signed user: ${user}`);
 			return user;
 		})
 		.catch((error) => {
