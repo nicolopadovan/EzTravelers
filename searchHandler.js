@@ -33,6 +33,10 @@ searchBtn.addEventListener("click", function (element) {
 		});
 })
 
+let searchEventSent = false;
 searchInput.addEventListener("focusout", function (event) {
-	fbq('track', 'Search', { searchTerm: searchInput.value });
+	if (!searchEventSent) {
+		fbq('track', 'Search', { searchTerm: searchInput.value });
+		searchEventSent = true;
+	}
 });
