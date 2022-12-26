@@ -32,7 +32,7 @@ function showNext() {
 	prevBtn.style.display = "block";
 	next.style.display = "block";
 
-	progressBar.style.transform = `scaleX(${(index) / structure.length})`;
+	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
 }
 
 function showPrevious() {
