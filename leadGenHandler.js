@@ -81,6 +81,7 @@ copyToClipboardBtn.addEventListener("click", function () {
 	temp.select();
 
 	navigator.clipboard.writeText(temp.value).then(function () {
+		console.log(temp.value);
 		alert("Copiato negli appunti!")
 		console.log("Copied to clipboard");
 	}, function (err) {
