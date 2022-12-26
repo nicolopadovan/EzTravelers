@@ -15,7 +15,7 @@ const structure = [
 let index = 0;
 function showNext() {
 	index += 1;
-	if (index >= structure.length - 1) {
+	if (index >= structure.length) {
 		return;
 	}
 
@@ -26,7 +26,7 @@ function showNext() {
 	prevBtn.style.display = "block";
 	next.style.display = "block";
 
-	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
+	progressBar.style.transform = `scaleX(${(index) / structure.length})`;
 }
 
 function showPrevious() {
@@ -48,7 +48,7 @@ function showPrevious() {
 const radioButtons = document.querySelectorAll("input[type='radio']");
 radioButtons.forEach((radio) => {
 	radio.addEventListener("click", (event) => {
-		radio.addEventListener("animationend", () => {
+		radio.addEventListener("animationed", () => {
 			radio.classList.remove("radioAnimation");
 			showNext();
 		});
