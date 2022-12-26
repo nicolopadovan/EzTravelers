@@ -15,7 +15,7 @@ const structure = [
 let index = 0;
 function showNext() {
 
-	if (index > structure.length - 1) {
+	if (index >= structure.length - 1) {
 		return;
 	}
 
@@ -55,14 +55,13 @@ function showPrevious() {
 		nextBtn.style.display = "none";
 	}
 
-
-	const currentPage = document.getElementById(structure[index]);
-	const previous = document.getElementById(structure[index - 1]);
+	const currentPage = document.getElementById(structure[index + 1]);
+	const previous = document.getElementById(structure[index]);
 
 	currentPage.style.display = "none";
 	previous.style.display = "block";
 
-	progressBar.style.transform = `scaleX(${(index) / structure.length})`;
+	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
 }
 
 function saveData() {
