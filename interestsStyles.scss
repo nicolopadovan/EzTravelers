@@ -1,0 +1,8 @@
+.radioAnimation {
+  animation: mymove 2s ease 0 1 normal fowards;
+}
+
+@keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}

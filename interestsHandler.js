@@ -14,43 +14,45 @@ const structure = [
 
 let index = 0;
 function showNext() {
-	console.log("Index: " + index);
+	index += 1;
 	if (index >= structure.length - 1) {
 		return;
 	}
 
-	const currentPage = document.getElementById(structure[index]);
-	const next = document.getElementById(structure[index + 1]);
+	const currentPage = document.getElementById(structure[index - 1]);
+	const next = document.getElementById(structure[index]);
 
 	currentPage.style.display = "none";
 	prevBtn.style.display = "block";
 	next.style.display = "block";
 
 	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
-	index += 1;
 }
 
 function showPrevious() {
-	console.log("Index: " + index);
+	index -= 1;
 	if (index <= 0) {
 		prevBtn.style.display = "none";
 		return;
 	}
 
-	const currentPage = document.getElementById(structure[index]);
-	const previous = document.getElementById(structure[index - 1]);
+	const currentPage = document.getElementById(structure[index + 1]);
+	const previous = document.getElementById(structure[index]);
 
 	currentPage.style.display = "none";
 	previous.style.display = "block";
 
 	progressBar.style.transform = `scaleX(${(index - 1) / structure.length})`;
-	index -= 1;
 }
 
 const radioButtons = document.querySelectorAll("input[type='radio']");
 radioButtons.forEach((radio) => {
 	radio.addEventListener("click", (event) => {
-		showNext();
+		radio.addEventListener("animationend", () => {
+			radio.classList.remove("radioAnimation");
+			showNext();
+		});
+		radio.classList.add("radioAnimation");
 	});
 });
 

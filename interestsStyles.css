@@ -1,0 +1,22 @@
+.radioAnimation {
+  -webkit-animation: mymove 2s ease 0 1 normal fowards;
+          animation: mymove 2s ease 0 1 normal fowards;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+@keyframes mymove {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}/*# sourceMappingURL=interestsStyles.css.map */
