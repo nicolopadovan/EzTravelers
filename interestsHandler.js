@@ -1,7 +1,7 @@
 import { currentUser } from "./firebaseAuth.js";
 import { addDocument, addDocumentWithAutoID } from "./firebaseFirestore.js";
 
-// const prevBtn = document.getElementById("prevBtn");
+const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const progressBar = document.getElementById("progressBar");
 
@@ -14,7 +14,7 @@ const structure = [
 
 let index = 0;
 function showNext() {
-	if (index >= structure.length) {
+	if (index >= structure.length - 1) {
 		return;
 	}
 
@@ -22,7 +22,7 @@ function showNext() {
 	const next = document.getElementById(structure[index + 1]);
 
 	currentPage.style.display = "none";
-	// prevBtn.style.display = "block";
+	prevBtn.style.display = "block";
 	next.style.display = "block";
 
 	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
@@ -31,7 +31,7 @@ function showNext() {
 
 function showPrevious() {
 	if (index <= 0) {
-		// prevBtn.style.display = "none";
+		prevBtn.style.display = "none";
 		return;
 	}
 
@@ -56,9 +56,9 @@ nextBtn.addEventListener("click", function () {
 	showNext();
 });
 
-// prevBtn.addEventListener("click", function () {
-// 	showPrevious();
-// });
+prevBtn.addEventListener("click", function () {
+	showPrevious();
+});
 
 // saveBtn.addEventListener("click", function () {
 
