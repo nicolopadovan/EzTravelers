@@ -1,26 +1,23 @@
 import { getDestinationsFromAPI } from "./firebaseFunctions.js";
 
-var searchBtn = document.getElementById("conversionBtn");
-var searchInput = document.getElementById("searchField");
-console.log("Triggered");
+const searchBtn = document.getElementById("conversionBtn");
+const searchInput = document.getElementById("searchField");
 searchBtn.addEventListener("click", function (element) {
 	element.preventDefault();
 
-	var searchTerm = searchInput.value;
+	let searchTerm = searchInput.value;
 
 	if (searchTerm === '') { return };
 
-	var filter = document.querySelector('input[name="Radio4"]:checked').value;
+	const filter = document.querySelector('input[name="Radio4"]:checked').value;
 	searchTerm = searchTerm + " " + filter;
 
-	console.log(searchTerm);
 	getDestinationsFromAPI({ searchTerm: searchTerm })
 		.then(function (result) {
 			// Read result of the Cloud Function.
-			console.log(result.data.result);
-			var destinations = result.data.result
+			const destinations = result.data.result
 
-			var searchErrorLabel = document.getElementById("searchErrorLabel");
+			const searchErrorLabel = document.getElementById("searchErrorLabel");
 			if (destinations.length) {
 				searchErrorLabel.style.display = "none";
 				window.location.href = "/destinations/" + destinations[0].slug;
@@ -30,8 +27,16 @@ searchBtn.addEventListener("click", function (element) {
 		})
 		.catch(function (error) {
 			console.log(error);
-			var code = error.code;
-			var message = error.message;
-			var details = error.details;
+			const code = error.code;
+			const message = error.message;
+			const details = error.details;
 		});
 })
+
+searchInput.addEventListener("propertychange", function (event) {
+	if (event.propertyName === "value") {
+		console.log("Value changed");
+
+		fbq('track', 'Search', { searchTerm: searchInput.value });
+	}
+});
