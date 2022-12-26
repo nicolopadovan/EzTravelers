@@ -1,12 +1,12 @@
 .radioAnimation {
   background-color: red;
-  animation: mymove 1.5s;
+  animation: mymove 0.15s;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(.5,0.05,1,.5);
   animation-fill-mode: forwards;
 }
 
 @keyframes mymove {
-  from {background-color: red;}
-  to {background-color: blue;}
+  from {background-color: #35b8be;}
+  to {background-color: white;}
 }
