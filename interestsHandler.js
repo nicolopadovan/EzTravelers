@@ -14,12 +14,12 @@ const structure = [
 
 let index = 0;
 function showNext() {
-	index += 1;
 
-	console.log(index);
 	if (index >= structure.length) {
 		return;
 	}
+
+	index += 1;
 
 	if (index === 0) {
 		nextBtn.style.display = "block";
@@ -40,11 +40,12 @@ function showNext() {
 }
 
 function showPrevious() {
-	index -= 1;
 
 	if (index < 0) {
 		return;
 	}
+
+	index -= 1;
 
 	if (index === 0) {
 		nextBtn.style.display = "block";
@@ -53,8 +54,8 @@ function showPrevious() {
 		nextBtn.style.display = "none";
 	}
 
-	const currentPage = document.getElementById(structure[index + 1]);
-	const previous = document.getElementById(structure[index]);
+	const currentPage = document.getElementById(structure[index]);
+	const previous = document.getElementById(structure[index - 1]);
 
 	currentPage.style.display = "none";
 	previous.style.display = "block";
