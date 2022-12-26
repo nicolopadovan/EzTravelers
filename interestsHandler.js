@@ -94,7 +94,8 @@ function saveData() {
 const radioButtons = document.querySelectorAll("input[type='radio']");
 radioButtons.forEach((radio) => {
 	radio.addEventListener("click", (event) => {
-		radio.parentElement.classList.add("radioAnimation");
+		showNext();
+		// radio.parentElement.classList.add("radioAnimation");
 	});
 	radio.parentElement.addEventListener("animationend", () => {
 		radio.parentElement.classList.remove("radioAnimation");
