@@ -34,9 +34,6 @@ searchBtn.addEventListener("click", function (element) {
 })
 
 searchInput.addEventListener("input", function (event) {
-	if (event.propertyName === "value") {
-		console.log("Value changed");
-
-		fbq('track', 'Search', { searchTerm: searchInput.value });
-	}
+	console.log("Value changed");
+	fbq('track', 'Search', { searchTerm: searchInput.value });
 });
