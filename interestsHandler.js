@@ -48,7 +48,7 @@ function showPrevious() {
 	currentPage.style.display = "none";
 	previous.style.display = "block";
 
-	progressBar.style.transform = `scaleX(${(index - 1) / structure.length})`;
+	progressBar.style.transform = `scaleX(${(index) / structure.length})`;
 }
 
 function saveData() {
@@ -84,6 +84,7 @@ radioButtons.forEach((radio) => {
 		radio.parentElement.classList.add("radioAnimation");
 	});
 	radio.parentElement.addEventListener("animationend", () => {
+		radio.parentElement.classList.add("radioAnimation");
 		showNext();
 	});
 });
