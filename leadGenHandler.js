@@ -7,6 +7,7 @@ const leadGenCloseBtn = document.getElementById("leadGenCloseBtn");
 const leadGenContainer = document.getElementById("leadGenContainer");
 const marketingCheckBox = document.getElementById("marketingCheckBox");
 const unlockBlurwallBtn = document.getElementById("unlockBlurwallBtn");
+const copyToClipboardBtn = document.getElementById("copyPlanBtn");
 
 function unlockBlurWall() {
 	window.localStorage.setItem('storageGrantConsent', 'true');
@@ -24,19 +25,7 @@ function unlockBlurWall() {
 	leadGenContainer.style.display = "none";
 }
 
-if (getCookie("personalization_email")) {
-	unlockBlurWall();
-}
-
-leadGenCloseBtn.addEventListener("click", function () {
-	leadGenContainer.style.display = "none";
-});
-
-function validateEmail(email) {
-	return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-}
-
-unlockBlurwallBtn.addEventListener("click", function () {
+function showLeadGenPopUp() {
 	leadGenContainer.style.display = "flex";
 
 	leadGenBtn.addEventListener("click", function () {
@@ -53,7 +42,7 @@ unlockBlurwallBtn.addEventListener("click", function () {
 		leadGenErrorLabel.style.display = "none";
 
 		unlockBlurWall();
-		// TODO: Code to save the consent of preferences storage cookies
+		// DONE: Code to save the consent of preferences storage cookies - DONE IN GTM
 		setCookie('personalization_email', email, { secure: true, 'max-age': 2628e6 });
 
 		addDocument("leadGenerationUsers", `${email}`, {
@@ -62,4 +51,41 @@ unlockBlurwallBtn.addEventListener("click", function () {
 			marketingConsent: marketingConsent
 		});
 	});
+}
+
+if (getCookie("personalization_email")) {
+	unlockBlurWall();
+}
+
+leadGenCloseBtn.addEventListener("click", function () {
+	leadGenContainer.style.display = "none";
+});
+
+function validateEmail(email) {
+	return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+}
+
+unlockBlurwallBtn.addEventListener("click", function () {
+	showLeadGenPopUp();
+});
+
+copyToClipboardBtn.addEventListener("click", function () {
+	if (!getCookie("personalization_email")) {
+		showLeadGenPopUp();
+		return;
+	}
+
+	var temp = document.createElement("input");
+	document.body.appendChild(temp);
+	temp.value = document.getElementById("copyPlanText").textContent;
+	temp.select();
+
+	navigator.clipboard.writeText(temp.value).then(function () {
+		alert("Copiato negli appunti!")
+		console.log("Copied to clipboard");
+	}, function (err) {
+		alert("Errore durante la copia negli appunti. Riprova!");
+		console.error("Failed to copy to clipboard", err);
+	});
+	temp.remove();
 });

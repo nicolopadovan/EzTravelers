@@ -184,7 +184,11 @@ async function linkCredential(credential) {
 
 const currentUser = () => { return auth.currentUser };
 
-authStateListener();
+authStateListener().then((user) => {
+	console.log(`User is logged in with UID ${user.uid}`);
+}).catch((error) => {
+	console.log(`User is signed out`);
+});
 
 export {
 	createUserWithEmail,
