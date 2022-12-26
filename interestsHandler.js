@@ -52,6 +52,7 @@ function showPrevious() {
 	if (index === 0) {
 		nextBtn.style.display = "block";
 		prevBtn.style.display = "none";
+		nextBtn.text = "Prossimo";
 	} else {
 		nextBtn.style.display = "none";
 	}
