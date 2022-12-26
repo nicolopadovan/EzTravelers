@@ -23,9 +23,10 @@ function showNext() {
 
 	if (index === 0) {
 		nextBtn.style.display = "block";
+		nextBtn.text = "Prossimo";
 	} else if (index === structure.length - 1) {
 		nextBtn.style.display = "block";
-		nextBtn.value = "Completa";
+		nextBtn.text = "Completa";
 	} else {
 		nextBtn.style.display = "none";
 	}

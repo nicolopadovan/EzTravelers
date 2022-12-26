@@ -3,10 +3,16 @@
   animation: mymove 0.15s;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(.5,0.05,1,.5);
-  animation-fill-mode: forwards;
+  // animation-fill-mode: forwards;
 }
 
 @keyframes mymove {
-  from {background-color: #35b8be;}
-  to {background-color: white;}
+  from { 
+    background-color: #35b8be;
+    color: white;
+  }
+  to { 
+    background-color: white; 
+    color: #35b8be;
+  }
 }
