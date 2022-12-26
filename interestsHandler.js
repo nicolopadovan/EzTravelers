@@ -22,7 +22,7 @@ function showNext() {
 	const next = document.getElementById(structure[index + 1]);
 
 	currentPage.style.display = "none";
-	prevBtn.style.display = "block";
+	// prevBtn.style.display = "block";
 	next.style.display = "block";
 
 	progressBar.style.transform = `scaleX(${(index + 1) / structure.length})`;
@@ -31,7 +31,7 @@ function showNext() {
 
 function showPrevious() {
 	if (index <= 0) {
-		prevBtn.style.display = "none";
+		// prevBtn.style.display = "none";
 		return;
 	}
 
@@ -56,9 +56,9 @@ nextBtn.addEventListener("click", function () {
 	showNext();
 });
 
-prevBtn.addEventListener("click", function () {
-	showPrevious();
-});
+// prevBtn.addEventListener("click", function () {
+// 	showPrevious();
+// });
 
 saveBtn.addEventListener("click", function () {
 
