@@ -1,8 +1,8 @@
 import { currentUser } from "./firebaseAuth.js";
 import { addDocument, addDocumentWithAutoID } from "./firebaseFirestore.js";
 
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("saveBtn");
+// const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 const progressBar = document.getElementById("progressBar");
 
 const structure = [
