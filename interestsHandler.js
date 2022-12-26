@@ -21,8 +21,10 @@ function showNext() {
 		return;
 	}
 
-	if (index === structure.length - 1 || index === 0) {
+	if (index === 0) {
 		nextBtn.style.display = "block";
+	} else if (index === structure.length - 1) {
+		nextBtn.value = "Completa";
 	} else {
 		nextBtn.style.display = "none";
 	}
@@ -40,10 +42,15 @@ function showNext() {
 function showPrevious() {
 	index -= 1;
 
-	console.log(index);
-	if (index <= 0) {
-		prevBtn.style.display = "none";
+	if (index < 0) {
 		return;
+	}
+
+	if (index === 0) {
+		nextBtn.style.display = "block";
+		prevBtn.style.display = "none";
+	} else {
+		nextBtn.style.display = "none";
 	}
 
 	const currentPage = document.getElementById(structure[index + 1]);
