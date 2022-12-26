@@ -48,7 +48,7 @@ function showPrevious() {
 const radioButtons = document.querySelectorAll("input[type='radio']");
 radioButtons.forEach((radio) => {
 	radio.addEventListener("click", (event) => {
-
+		showNext();
 	});
 });
 
