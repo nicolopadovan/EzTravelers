@@ -84,7 +84,7 @@ radioButtons.forEach((radio) => {
 		radio.parentElement.classList.add("radioAnimation");
 	});
 	radio.parentElement.addEventListener("animationend", () => {
-		radio.parentElement.classList.add("radioAnimation");
+		radio.parentElement.classList.remove("radioAnimation");
 		showNext();
 	});
 });
