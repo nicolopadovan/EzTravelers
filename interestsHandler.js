@@ -14,6 +14,7 @@ const structure = [
 
 let index = 0;
 function showNext() {
+	console.log("Index: " + index);
 	if (index >= structure.length - 1) {
 		return;
 	}
@@ -30,6 +31,7 @@ function showNext() {
 }
 
 function showPrevious() {
+	console.log("Index: " + index);
 	if (index <= 0) {
 		prevBtn.style.display = "none";
 		return;
