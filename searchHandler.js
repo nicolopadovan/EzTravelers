@@ -33,7 +33,7 @@ searchBtn.addEventListener("click", function (element) {
 		});
 })
 
-searchInput.addEventListener("propertychange", function (event) {
+searchInput.addEventListener("input", function (event) {
 	if (event.propertyName === "value") {
 		console.log("Value changed");
 
