@@ -1,6 +1,9 @@
 .radioAnimation {
   background-color: red;
-  animation: mymove 2s ease 0 1 normal fowards;
+  animation: mymove 1.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+  animation-fill-mode: forwards;
 }
 
 @keyframes mymove {
