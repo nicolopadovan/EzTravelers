@@ -15,7 +15,7 @@ const structure = [
 let index = 0;
 function showNext() {
 
-	if (index >= structure.length) {
+	if (index > structure.length - 1) {
 		return;
 	}
 
@@ -24,6 +24,7 @@ function showNext() {
 	if (index === 0) {
 		nextBtn.style.display = "block";
 	} else if (index === structure.length - 1) {
+		nextBtn.style.display = "block";
 		nextBtn.value = "Completa";
 	} else {
 		nextBtn.style.display = "none";
@@ -53,6 +54,7 @@ function showPrevious() {
 	} else {
 		nextBtn.style.display = "none";
 	}
+
 
 	const currentPage = document.getElementById(structure[index]);
 	const previous = document.getElementById(structure[index - 1]);
