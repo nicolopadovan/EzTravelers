@@ -48,13 +48,14 @@ function showPrevious() {
 const radioButtons = document.querySelectorAll("input[type='radio']");
 radioButtons.forEach((radio) => {
 	radio.addEventListener("click", (event) => {
-		radio.addEventListener("animationend", () => {
-			radio.parentElement.classList.remove("radioAnimation");
-			showNext();
-		});
 		radio.parentElement.classList.add("radioAnimation");
 	});
+	radio.parentElement.addEventListener("animationend", () => {
+		radio.parentElement.classList.remove("radioAnimation");
+		showNext();
+	});
 });
+
 
 nextBtn.addEventListener("click", function () {
 	showNext();
