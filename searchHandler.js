@@ -1,7 +1,9 @@
 const searchBtn = document.getElementById("conversionBtn");
 const searchInput = document.getElementById("searchField");
 searchBtn.addEventListener("click", function (element) {
+	console.log("Search Btn Clicked");
 	import("./firebaseFunctions.js").then(({ getDestinationsFromAPI }) => {
+		console.log("Should have imported");
 		element.preventDefault();
 
 		let searchTerm = searchInput.value;
