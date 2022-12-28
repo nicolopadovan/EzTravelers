@@ -21,8 +21,8 @@ auth.languageCode = "it"
 
 async function createUserWithEmail(email, password) {
 	return new Promise((resolve, reject) => {
-		if (currentUser) {
-			const credential = EmailAuthProvider.credential(email, password);
+		const credential = EmailAuthProvider.credential(email, password);
+		if (credential) {
 			linkCredential(credential).then(() => {
 				resolve();
 			}).catch((error) => {
@@ -119,8 +119,8 @@ async function signInAnonymous() {
 
 async function signInWithGoogle() {
 
-	if (currentUser) {
-		const credential = GoogleAuthProvider.credential();
+	const credential = GoogleAuthProvider.credential();
+	if (credential) {
 		linkCredential(credential).then(() => {
 			resolve();
 		}).catch((error) => {
