@@ -68,7 +68,6 @@ window.addEventListener('DOMContentLoaded', () => {
 				}, 16);
 			}
 		});
-		$('#datepicker').datepicker('show');
 
 		$('#datepicker2').datepicker({
 			defaultDate: 0,
