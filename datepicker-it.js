@@ -37,5 +37,50 @@
 	datepicker.setDefaults(datepicker.regional.it);
 
 	return datepicker.regional.it;
+});
 
+window.addEventListener('DOMContentLoaded', () => {
+	$(function () {
+		let numberOfMonths = [1, 2];
+		let stepMonths = 2;
+		if ($(window).width() <= 478) { // Mobile Portrait Breakpoint
+			numberOfMonths = [1, 1];
+			stepMonths = 1;
+		}
+
+		$('#datepicker').datepicker({
+			defaultDate: 0,
+			maxDate: "2y",
+			minDate: "0",
+			numberOfMonths: numberOfMonths,
+			showOtherMonths: false,
+			selectOtherMonths: false,
+			stepMonths: stepMonths,
+			changeYear: true,
+			changeMonth: true,
+			showButtonPanel: false,
+			onSelect: function (selectedDate) {
+				console.log(`OnSelect triggered: ${selectedDate}`);
+				$("#datepicker2").datepicker("option", "minDate", selectedDate);
+				$("#datepicker2").datepicker("setDate", selectedDate);
+				setTimeout(function () {
+					$("#datepicker2").datepicker('show');
+				}, 16);
+			}
+		});
+		$('#datepicker').datepicker('show');
+
+		$('#datepicker2').datepicker({
+			defaultDate: 0,
+			maxDate: "2y",
+			minDate: "0",
+			numberOfMonths: numberOfMonths,
+			showOtherMonths: false,
+			selectOtherMonths: false,
+			stepMonths: stepMonths,
+			changeYear: true,
+			changeMonth: true,
+			showButtonPanel: false,
+		});
+	});
 });
