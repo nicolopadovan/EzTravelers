@@ -929,7 +929,7 @@ works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
 	border: 1px solid var(--brand);
-	/* background: var(--brand) url("images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x; */
+	background: var(--brand);
 	font-weight: bold;
 	color: white;
 }
@@ -954,7 +954,7 @@ a:visited.ui-button,
 	border: 1px solid white;
 	/* background: white url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x; */
 	font-weight: bold;
-	color: var(--brand);
+	color: var(--navigators);
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
